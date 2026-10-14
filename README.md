@@ -1,12 +1,21 @@
 # Zone Rouge
 
-FPS PvP en réseau entre potes, pour Windows (moteur Godot 4.5.1) : Match à mort par équipe, Mêlée générale, Désamorçage, mode classé, passe de combat gratuit, skins, manette…
+FPS PvP en réseau entre potes, pour Windows et Linux (moteur Godot 4.5.1) : Match à mort par équipe, Mêlée générale, Désamorçage, mode classé, passe de combat gratuit, skins, manette…
 
 ## Télécharger le jeu
 
-1. Ouvre la page **[Releases](https://github.com/Titan-CyberTech/Zone_Rouge/releases/latest)** et télécharge `ZoneRouge_Windows_vX.Y.Z.zip`.
-2. Dézippe le dossier `ZoneRouge` dans un endroit où tu peux écrire (Bureau, Documents, disque de jeux…), **pas dans « Program Files »**.
-3. Lance `ZoneRouge.exe`. Si Windows affiche « Windows a protégé votre ordinateur » (jeu non signé) : *Informations complémentaires* → *Exécuter quand même*.
+Ouvre la page **[Releases](https://github.com/Titan-CyberTech/Zone_Rouge/releases/latest)**.
+
+**Windows (10 / 11, 64 bits)**
+1. Télécharge `ZoneRouge_Windows_vX.Y.Z.zip` et dézippe le dossier `ZoneRouge` dans un endroit où tu peux écrire (Bureau, Documents, disque de jeux…), **pas dans « Program Files »**.
+2. Lance `ZoneRouge.exe`. Si Windows affiche « Windows a protégé votre ordinateur » (jeu non signé) : *Informations complémentaires* → *Exécuter quand même*.
+
+**Linux (64 bits)**
+1. Télécharge `ZoneRouge_Linux_vX.Y.Z.zip` et dézippe-le dans ton dossier personnel (ex. `~/Jeux/ZoneRouge`).
+2. Lance `ZoneRouge.x86_64` (double-clic, ou `./ZoneRouge.x86_64` dans un terminal ; si besoin `chmod +x ZoneRouge.x86_64`).
+3. Pilote graphique Vulkan conseillé (Mesa ou NVIDIA) ; sans Vulkan, le jeu passe en OpenGL.
+
+Les joueurs Windows et Linux jouent ensemble dans les mêmes parties.
 
 Le fichier `LISEZ-MOI.txt` du dossier explique tout : commandes clavier et manette, jeu en réseau (LAN, VPN de jeu ou ports UDP 7777 / 7778), modes, économie, passe de combat.
 
@@ -14,6 +23,7 @@ Pour jouer ensemble, tout le monde doit avoir la même version : il suffit que c
 
 ## Nouveautés
 
+- **3.4** : le jeu est disponible sous Linux, en multijoueur avec les joueurs Windows.
 - **3.3.1** : petites corrections (en spectateur à la manette, les boutons affichés sont ceux de la manette).
 - **3.3** : écrans de chargement au lancement, à l'entrée en partie (carte, mode, règles) et au retour au menu, avec des astuces. La recherche de mise à jour est visible : le jeu écrit en petit ce qu'il lit sur GitHub et confirme s'il est à jour. En Désamorçage, vue d'ensemble de la carte avant la première manche ; en réseau, un PC plus lent à charger la carte ne rate plus le début de la partie.
 - **3.2** : mises à jour automatiques depuis cette page.
@@ -27,9 +37,9 @@ Pour jouer ensemble, tout le monde doit avoir la même version : il suffit que c
 ```
 › Lecture de api.github.com/repos/Titan-CyberTech/Zone_Rouge/releases/latest
 › Réponse de GitHub : code 200 · 7 Ko lus en 240 ms
-› Dernière version publiée : v3.3.1 « Zone Rouge 3.3.1 » — publiée le …
-› Fichiers : ZoneRouge.pck (14,8 Mo, SHA-256) · ZoneRouge_Windows_v3.3.1.zip (45,5 Mo, SHA-256)
-› Ta version : 3.3.1 -> le jeu est à jour
+› Dernière version publiée : v3.4.0 « Zone Rouge 3.4.0 » — publiée le …
+› Fichiers : ZoneRouge.pck (14,8 Mo, SHA-256) · ZoneRouge_Linux.pck (14,8 Mo, SHA-256) · …
+› Ta version : 3.4.0 -> le jeu est à jour
 ```
 
 - En vert, tout va bien ; en jaune, une nouvelle version a été trouvée ; en rouge, un problème (hors ligne, GitHub indisponible…).
@@ -39,8 +49,8 @@ Pour jouer ensemble, tout le monde doit avoir la même version : il suffit que c
 
 ## Publier une nouvelle version
 
-1. Augmenter la version du jeu (`GAME_VERSION`) puis exporter « Windows Desktop ».
-2. Créer une Release avec le tag **`v` + la version du jeu** (ex. `v3.3.1`), écrire les nouveautés (elles s'affichent dans le jeu) et joindre :
-   - `ZoneRouge_Windows_v3.3.1.zip` : le dossier `ZoneRouge` complet (pour les nouveaux joueurs, et quand la version de Godot change) ;
-   - `ZoneRouge.pck` : la mise à jour légère (~15 Mo).
+1. Augmenter la version du jeu (`GAME_VERSION`) puis exporter « Windows Desktop » et « Linux ».
+2. Créer une Release avec le tag **`v` + la version du jeu** (ex. `v3.4.0`), écrire les nouveautés (elles s'affichent dans le jeu) et joindre les 4 fichiers :
+   - `ZoneRouge_Windows_v3.4.0.zip` et `ZoneRouge_Linux_v3.4.0.zip` : le dossier `ZoneRouge` complet de chaque système (pour les nouveaux joueurs, et quand la version de Godot change) ;
+   - `ZoneRouge.pck` (Windows) et `ZoneRouge_Linux.pck` (Linux) : la mise à jour légère (~15 Mo). Chaque jeu prend le fichier dont le nom contient son système (sans nom de système = Windows).
 3. Laisser l'étiquette « Latest » (pas « Pre-release »), puis publier : tous les joueurs reçoivent la mise à jour au lancement suivant.
