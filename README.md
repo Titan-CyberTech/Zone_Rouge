@@ -1,6 +1,7 @@
 # Zone Rouge
 
 FPS PvP en réseau entre potes, pour Windows et Linux (moteur Godot 4.5.1) : Match à mort par équipe, Mêlée générale, Désamorçage, mode classé, passe de combat gratuit, skins, manette…
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/270b1453-b4bf-4302-8c79-91c5f17ee077" />
 
 ## Télécharger le jeu
 
@@ -34,6 +35,7 @@ Pour jouer ensemble, tout le monde doit avoir la même version : il suffit que c
 ## Mises à jour automatiques
 
 À chaque lancement, l'écran de chargement vérifie la dernière Release publiée ici et affiche en petit ce qu'il lit :
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d6e6614c-fc77-42a7-bad2-7dedee192076" />
 
 ```
 › Lecture de api.github.com/repos/Titan-CyberTech/Zone_Rouge/releases/latest
