@@ -1,6 +1,8 @@
 # Zone Rouge
 
 FPS PvP en réseau entre potes, pour Windows et Linux (moteur Godot 4.5.1) : Match à mort par équipe, Mêlée générale, Désamorçage, mode classé, passe de combat gratuit, skins, manette…
+
+Site officiel : **[zonerouge.online](https://zonerouge.online)** · dernière version : **3.5.1**
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/270b1453-b4bf-4302-8c79-91c5f17ee077" />
 
 ## Télécharger le jeu
@@ -24,6 +26,7 @@ Pour jouer ensemble, tout le monde doit avoir la même version : il suffit que c
 
 ## Nouveautés
 
+- **3.5.1** : petit correctif. Corrections mineures et nettoyage interne ; rien ne change dans ton profil ni dans tes réglages.
 - **3.5** : menus entièrement redessinés, dans un style plus clair et plus épuré (nouvelle police, encarts légers, un seul repère rouge pour l'onglet actif et l'action principale ; écrans de chargement, de mise à jour et menu pause assortis). Réseau plus fiable : un joueur ne peut plus en voir un autre sans être vu de lui (amis reconnus en ligne dès le premier message, parties annoncées sur tous les réseaux du PC, état des joueurs renvoyé deux fois par seconde par l'hôte pour corriger une apparition ou une élimination perdue).
 - **3.4** : le jeu est disponible sous Linux, en multijoueur avec les joueurs Windows.
 - **3.3.1** : petites corrections (en spectateur à la manette, les boutons affichés sont ceux de la manette).
@@ -40,9 +43,9 @@ Pour jouer ensemble, tout le monde doit avoir la même version : il suffit que c
 ```
 › Lecture de api.github.com/repos/Titan-CyberTech/Zone_Rouge/releases/latest
 › Réponse de GitHub : code 200 · 7 Ko lus en 240 ms
-› Dernière version publiée : v3.5.0 « Zone Rouge 3.5.0 » — publiée le …
+› Dernière version publiée : v3.5.1 « Zone Rouge 3.5.1 » — publiée le …
 › Fichiers : ZoneRouge.pck (14,8 Mo, SHA-256) · ZoneRouge_Linux.pck (14,8 Mo, SHA-256) · …
-› Ta version : 3.5.0 -> le jeu est à jour
+› Ta version : 3.5.1 -> le jeu est à jour
 ```
 
 - En vert, tout va bien ; en jaune, une nouvelle version a été trouvée ; en rouge, un problème (hors ligne, GitHub indisponible…).
@@ -53,7 +56,7 @@ Pour jouer ensemble, tout le monde doit avoir la même version : il suffit que c
 ## Publier une nouvelle version
 
 1. Augmenter la version du jeu (`GAME_VERSION`) puis exporter « Windows Desktop » et « Linux ».
-2. Créer une Release avec le tag **`v` + la version du jeu** (ex. `v3.5.0`), écrire les nouveautés (elles s'affichent dans le jeu) et joindre les 4 fichiers :
-   - `ZoneRouge_Windows_v3.5.0.zip` et `ZoneRouge_Linux_v3.5.0.zip` : le dossier `ZoneRouge` complet de chaque système (pour les nouveaux joueurs, et quand la version de Godot change) ;
+2. Créer une Release avec le tag **`v` + la version du jeu** (ex. `v3.5.1`), écrire les nouveautés (elles s'affichent dans le jeu) et joindre les 4 fichiers :
+   - `ZoneRouge_Windows_v3.5.1.zip` et `ZoneRouge_Linux_v3.5.1.zip` : le dossier `ZoneRouge` complet de chaque système (pour les nouveaux joueurs, et quand la version de Godot change) ;
    - `ZoneRouge.pck` (Windows) et `ZoneRouge_Linux.pck` (Linux) : la mise à jour légère (~15 Mo). Chaque jeu prend le fichier dont le nom contient son système (sans nom de système = Windows).
 3. Laisser l'étiquette « Latest » (pas « Pre-release »), puis publier : tous les joueurs reçoivent la mise à jour au lancement suivant.
